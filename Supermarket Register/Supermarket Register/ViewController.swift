@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
         
         var result = productHandler.calcTotal(products: text)
-        print("tex: $"+result[0].description)
+        print("tax: $"+result[0].description)
         print("total: $"+result[1].description)
         taxValue.text = "$"+result[0].description
         totalValue.text = "$"+result[1].description
