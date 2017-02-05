@@ -12,9 +12,9 @@ class ProductRecord {
     var index: Int
     var name: String
     var code: String
-    var price: String
+    var price: Double
     
-    init(index: Int, name: String, code: String, price: String) {
+    init(index: Int, name: String, code: String, price: Double) {
         self.index = index
         self.name = name
         self.code = code
@@ -29,7 +29,7 @@ class ProductRecord {
         return self.code
     }
     
-    var getPrice: String {
+    var getPrice: Double {
         return self.price
     }
 }

@@ -100,6 +100,8 @@
                     </view>
                     <connections>
                         <outlet property="productInput" destination="g99-1w-gnu" id="PMO-K9-axN"/>
+                        <outlet property="taxValue" destination="dAn-4B-0C7" id="og0-SS-TGA"/>
+                        <outlet property="totalValue" destination="FNe-Mg-Y2M" id="zFq-4e-S0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

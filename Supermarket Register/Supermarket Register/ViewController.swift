@@ -11,7 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var productInput: UITextField! //User input field
+    @IBOutlet weak var taxValue: UILabel!
+    @IBOutlet weak var totalValue: UILabel!
     
+    
+    let productHandler = ProductRecordHandler()
+
     @IBAction func submitProductCodes(_ sender: UIButton) {
         print("Submit button Pressed") //For Testing
         
@@ -26,13 +31,19 @@ class ViewController: UIViewController {
         }else{
             print("UITextField is blank")
         }
+        
+        var result = productHandler.calcTotal(products: text)
+        print("tex: $"+result[0].description)
+        print("total: $"+result[1].description)
+        taxValue.text = "$"+result[0].description
+        totalValue.text = "$"+result[1].description
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.self.backgroundColor = UIColor.lightGray //Set Background color
         
-        let productHandler = ProductRecordHandler()
         if(productHandler.initProductRecords())
         {
             print("Initialization Successful\n")
