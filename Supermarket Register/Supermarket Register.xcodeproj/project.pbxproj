@@ -14,6 +14,8 @@
 		A81F9BE11E458FAD00B67BF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81F9BDF1E458FAD00B67BF8 /* LaunchScreen.storyboard */; };
 		A81F9BEC1E458FAD00B67BF8 /* Supermarket_RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9BEB1E458FAD00B67BF8 /* Supermarket_RegisterTests.swift */; };
 		A81F9BF71E458FAD00B67BF8 /* Supermarket_RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9BF61E458FAD00B67BF8 /* Supermarket_RegisterUITests.swift */; };
+		A81F9C051E46F52E00B67BF8 /* ProductRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9C041E46F52E00B67BF8 /* ProductRecord.swift */; };
+		A81F9C071E46FA5600B67BF8 /* ProductRecordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9C061E46FA5600B67BF8 /* ProductRecordHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A81F9BF21E458FAD00B67BF8 /* Supermarket RegisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Supermarket RegisterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81F9BF61E458FAD00B67BF8 /* Supermarket_RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supermarket_RegisterUITests.swift; sourceTree = "<group>"; };
 		A81F9BF81E458FAD00B67BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A81F9C041E46F52E00B67BF8 /* ProductRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRecord.swift; sourceTree = "<group>"; };
+		A81F9C061E46FA5600B67BF8 /* ProductRecordHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRecordHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				A81F9BDD1E458FAD00B67BF8 /* Assets.xcassets */,
 				A81F9BDF1E458FAD00B67BF8 /* LaunchScreen.storyboard */,
 				A81F9BE21E458FAD00B67BF8 /* Info.plist */,
+				A81F9C041E46F52E00B67BF8 /* ProductRecord.swift */,
+				A81F9C061E46FA5600B67BF8 /* ProductRecordHandler.swift */,
 			);
 			path = "Supermarket Register";
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			files = (
 				A81F9BD91E458FAD00B67BF8 /* ViewController.swift in Sources */,
 				A81F9BD71E458FAD00B67BF8 /* AppDelegate.swift in Sources */,
+				A81F9C051E46F52E00B67BF8 /* ProductRecord.swift in Sources */,
+				A81F9C071E46FA5600B67BF8 /* ProductRecordHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.self.backgroundColor = UIColor.gray
+        view.self.backgroundColor = UIColor.lightGray
+        
+        let productHandler = ProductRecordHandler()
+        if(productHandler.initProductRecords())
+        {
+            print("Initialization Successful")
+        }else{
+            print("Initialization Unsuccessful")
+        }
+        
+        productHandler.printAllRecords()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
