@@ -10,34 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var productInput: UITextField!
+    @IBOutlet weak var productInput: UITextField! //User input field
     
     @IBAction func submitProductCodes(_ sender: UIButton) {
-        /************* Testing *****************/
-        print("Submit button Pressed")
+        print("Submit button Pressed") //For Testing
         
         guard let text = productInput.text else {
             print("productInput not available")
             return
         }
-        print("UITextField is", text)
+        
+        if(text != "")
+        {
+            print("UITextField is", text)
+        }else{
+            print("UITextField is blank")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.self.backgroundColor = UIColor.lightGray
+        view.self.backgroundColor = UIColor.lightGray //Set Background color
         
         let productHandler = ProductRecordHandler()
         if(productHandler.initProductRecords())
         {
-            print("Initialization Successful")
+            print("Initialization Successful\n")
         }else{
-            print("Initialization Unsuccessful")
+            print("Initialization Unsuccessful\n")
         }
         
-        productHandler.printAllRecords()
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        productHandler.printAllRecords() //For Testing
     }
 
     override func didReceiveMemoryWarning() {
