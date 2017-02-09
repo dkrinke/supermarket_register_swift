@@ -5,5 +5,5 @@ xcode_scheme: Supermarket Register #4
 xcode_sdk: iphonesimulator8.3 #5
 
 script:
-    - xcodebuild clean build -sdk iphonesimulator -workspace upermarket Register/Supermarket Register.xcodeproj -scheme ProjectTests CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean build -sdk iphonesimulator -project Supermarket Register/Supermarket Register.xcodeproj -scheme ProjectTests CODE_SIGNING_REQUIRED=NO
 
