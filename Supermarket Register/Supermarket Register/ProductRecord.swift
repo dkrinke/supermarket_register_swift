@@ -9,13 +9,11 @@
 import Foundation
 
 class ProductRecord {
-    var index: Int
     var name: String
     var code: String
     var price: Double
     
-    init(index: Int, name: String, code: String, price: Double) {
-        self.index = index
+    init(name: String, code: String, price: Double) {
         self.name = name
         self.code = code
         self.price = price
