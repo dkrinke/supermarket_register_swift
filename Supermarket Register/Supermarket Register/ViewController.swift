@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     
     let productHandler = ProductRecordHandler()
+    let helperFunctions = HelperFunctions()
 
     @IBAction func submitProductCodes(_ sender: UIButton) {
         print("Submit button Pressed") //For Testing
@@ -25,18 +26,17 @@ class ViewController: UIViewController {
             return
         }
         
-        if(text != "")
+        if(helperFunctions.validateInput(input: text))
         {
-            print("UITextField is", text)
-        }else{
-            print("UITextField is blank")
+            var result = productHandler.calcTotal(products: text)
+            print("tax: $"+result[0].description)
+            print("total: $"+result[1].description)
+            taxValue.text = "$"+result[0].description
+            totalValue.text = "$"+result[1].description
+        }else
+        {
+            return
         }
-        
-        var result = productHandler.calcTotal(products: text)
-        print("tax: $"+result[0].description)
-        print("total: $"+result[1].description)
-        taxValue.text = "$"+result[0].description
-        totalValue.text = "$"+result[1].description
         
     }
     
@@ -58,6 +58,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
