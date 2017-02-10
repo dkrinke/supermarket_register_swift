@@ -125,17 +125,17 @@ class Supermarket_RegisterTests: XCTestCase {
         XCTAssert(product.getName == "Cereal", "Pass")
     }
     
+    func testProductRecordHandlerInit() {
+        
+        let productHandler = ProductRecordHandler()
+        XCTAssertNotNil(productHandler, "Pass")
+    }
+    
     func testInitProductRecords() {
         
         let productHandler = ProductRecordHandler()
         XCTAssertTrue(productHandler.initProductRecords(),"initProductRecords() Failed")
         
-    }
-    
-    func testProductRecordHandlerInit() {
-        
-        let productHandler = ProductRecordHandler()
-        XCTAssertNotNil(productHandler, "Pass")
     }
     
     func testCalcTotal() {
