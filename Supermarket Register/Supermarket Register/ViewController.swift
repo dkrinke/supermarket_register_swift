@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     let helperFunctions = HelperFunctions()
 
     @IBAction func submitProductCodes(_ sender: UIButton) {
-        print("Submit button Pressed") //For Testing
+//        print("Submit button Pressed") //For Testing
         
         guard let text = productInput.text else {
             print("productInput not available")
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         if(helperFunctions.validateInput(input: text))
         {
             var result = productHandler.calcTotal(products: text)
-            print("tax: $"+result[0].description)
-            print("total: $"+result[1].description)
+//            print("tax: $"+result[0].description) //For Testing
+//            print("total: $"+result[1].description) //For Testing
             taxValue.text = "$"+result[0].description
             totalValue.text = "$"+result[1].description
         }else
@@ -44,14 +44,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.self.backgroundColor = UIColor.lightGray //Set Background color
         
-        if(productHandler.initProductRecords())
-        {
-            print("Initialization Successful\n")
-        }else{
-            print("Initialization Unsuccessful\n")
-        }
+        productHandler.initProductRecords()
         
-        productHandler.printAllRecords() //For Testing
+//        if(productHandler.initProductRecords())
+//        {
+//            print("Initialization Successful\n")
+//        }else{
+//            print("Initialization Unsuccessful\n")
+//        }
+//        productHandler.printAllRecords() //For Testing
+        
     }
 
     override func didReceiveMemoryWarning() {
