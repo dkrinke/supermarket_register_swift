@@ -17,6 +17,7 @@ class HelperFunctions {
         if(input == ""){
             return false;
         }
+        return true;
     }
 }
 
