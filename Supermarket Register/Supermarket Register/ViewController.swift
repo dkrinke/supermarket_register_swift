@@ -11,15 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var productInput: UITextField! //User input field
-    @IBOutlet weak var taxValue: UILabel!
-    @IBOutlet weak var totalValue: UILabel!
+    @IBOutlet weak var taxValue: UILabel! //UILabel to update tax value
+    @IBOutlet weak var totalValue: UILabel! //UILabel to update total value
     
     
-    let productHandler = ProductRecordHandler()
-    let helperFunctions = HelperFunctions()
+    let productHandler = ProductRecordHandler() //Provides functions for calculating total based on use input
+    let helperFunctions = HelperFunctions() //Provides a function to validate user input
 
     @IBAction func submitProductCodes(_ sender: UIButton) {
-//        print("Submit button Pressed") //For Testing
         
         guard let text = productInput.text else {
             print("productInput not available")
@@ -28,9 +27,7 @@ class ViewController: UIViewController {
         
         if(helperFunctions.validateInput(input: text))
         {
-            var result = productHandler.calcTotal(products: text)
-//            print("tax: $"+result[0].description) //For Testing
-//            print("total: $"+result[1].description) //For Testing
+            var result = productHandler.calcTotal(products: helperFunctions.toCap(lowercase: text))
             taxValue.text = "$"+result[0].description
             totalValue.text = "$"+result[1].description
         }else
@@ -45,15 +42,6 @@ class ViewController: UIViewController {
         view.self.backgroundColor = UIColor.lightGray //Set Background color
         
         productHandler.initProductRecords()
-        
-//        if(productHandler.initProductRecords())
-//        {
-//            print("Initialization Successful\n")
-//        }else{
-//            print("Initialization Unsuccessful\n")
-//        }
-//        productHandler.printAllRecords() //For Testing
-        
     }
 
     override func didReceiveMemoryWarning() {

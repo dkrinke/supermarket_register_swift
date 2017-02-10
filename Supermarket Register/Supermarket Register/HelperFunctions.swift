@@ -10,14 +10,23 @@ import Foundation
 
 class HelperFunctions {
 
+    /**
+     Vadlidates users input
+     
+     - parameter bar: String of user input
+     
+     - returns: Boolean.
+     */
     func validateInput(input: String) -> Bool{
-        
-        print(input)
-        
+                
         if(input == ""){
             return false;
         }
         return true;
+    }
+    
+    func toCap(lowercase: String) -> String{
+        return lowercase.uppercased()
     }
 }
 
