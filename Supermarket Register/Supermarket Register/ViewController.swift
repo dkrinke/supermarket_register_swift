@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     
     let productHandler = ProductRecordHandler() //Provides functions for calculating total based on use input
-    let helperFunctions = HelperFunctions() //Provides a function to validate user input
+    let helperFunctions = HelperFunctions() //Provides a helper function to validate/convert user input
 
     @IBAction func submitProductCodes(_ sender: UIButton) {
         
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         if(helperFunctions.validateInput(input: text))
         {
             var result = productHandler.calcTotal(products: helperFunctions.toCap(lowercase: text))
-            taxValue.text = "$"+result[0].description
-            totalValue.text = "$"+result[1].description
+            taxValue.text = helperFunctions.returnDollarFormat(amount: result[0]) // Set the tax value
+            totalValue.text = helperFunctions.returnDollarFormat(amount: result[1]) // Set the total value
         }else
         {
             return
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.self.backgroundColor = UIColor.lightGray //Set Background color
         
-        productHandler.initProductRecords()
+        productHandler.initProductRecords() // Initializes the Product codes when the view loads
     }
 
     override func didReceiveMemoryWarning() {
