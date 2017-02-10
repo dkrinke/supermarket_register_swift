@@ -22,6 +22,9 @@ class HelperFunctions {
         if(input == ""){
             return false;
         }
+        
+        ///((((((([A-Za-z0-9]){4}(-)){3})([A-Za-z0-9]){4}(;|)))(?!-))+)/g
+        
         return true;
     }
     
